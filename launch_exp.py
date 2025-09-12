@@ -96,6 +96,7 @@ class ExperimentRunner:
             
         elif self.config.dataset == "brain_cancer":
             self.train_loader, self.val_loader, self.test_loader, self.class_names = get_data_brain_cancer(
+                max_dataset_size=self.config.n_real_samples,
                 data_root='./data/brain_cancer', 
                 train_batch_size=self.config.train_batch_size,
                 test_batch_size=self.config.train_batch_size,
@@ -146,6 +147,7 @@ class ExperimentRunner:
             f"num_runs={self.config.num_runs}"
         )
         
+        os.makedirs("exps", exist_ok=True)
         self.tracker = EmissionsTracker(
             project_name=self.experiment_name,
             output_file=f"exps/{self.experiment_name}.csv"
@@ -672,7 +674,7 @@ if __name__ == "__main__":
         config.patience = exp.get("patience", 3)
         config.unfreeze_layers = exp.get("unfreeze_layers", 2)
         config.simple_head = exp.get("simple_head", False)
-        
+
         experiment_configs.append(config)
 
     print(f"--- Starting {len(experiment_configs)} Experiments ---")
