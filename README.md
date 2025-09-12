@@ -13,15 +13,29 @@ Results on **Brain Cancer MRI**, **BreakHis** and **PatchCamelyon** datasets sho
 
 ## Setup
 1) Clone the repository
-  ```bash
-  git clone https://github.com/DanielVilaCruz/Fast-and-Frugal-Transfer-Learning.git
-  cd Fast-and-Frugal-Transfer-Learning
-  ```
-2) Install dependencies
-  ```bash
-  pip install -r requirements.txt
-  ```
-3) Download datasets and place them under the /data folder.
+    ```bash
+    git clone https://github.com/DanielVilaCruz/Fast-and-Frugal-Transfer-Learning.git
+    cd Fast-and-Frugal-Transfer-Learning
+    ```
+2) Install PyTorch
+
+   This project requires PyTorch (with CUDA or CPU support).
+
+   Example (CUDA 12.1):
+   ```bash
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+   ```
+   Example (CPU):
+   ```bash
+   pip install torch torchvision torchaudio
+   ```
+   
+   
+4) Install project dependencies
+    ```bash
+    pip install -r requirements.txt
+    ```
+4) Download datasets and place them under the /data folder.
 - Brain Cancer MRI: https://data.mendeley.com/datasets/mk56jw9rns/1
 - BreakHis: https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/
 - PatchCamyleon:https://github.com/basveeling/pcam
