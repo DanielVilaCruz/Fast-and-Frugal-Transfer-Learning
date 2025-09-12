@@ -16,6 +16,7 @@ from datasets import load_dataset
 import h5py
 
 def get_data_brain_cancer(data_root='./data/brain_cancer', 
+                         max_dataset_size=None,
                          train_batch_size=256, 
                          val_batch_size=256,
                          test_batch_size=256, 
@@ -59,12 +60,19 @@ def get_data_brain_cancer(data_root='./data/brain_cancer',
         transforms.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
     ])
     
+    
     # Load full dataset (will be split)
     full_dataset = ImageFolder(root=data_root, transform=transform_test)
-    
+
     # Get class names from folder structure
     class_names = full_dataset.classes
 
+    if max_dataset_size is not None and max_dataset_size > 0:
+        if len(full_dataset) > max_dataset_size:
+            # Create a subset of the dataset
+            indices = torch.randperm(len(full_dataset))[:max_dataset_size]
+            full_dataset = torch.utils.data.Subset(full_dataset, indices)
+    
     dataset_size = len(full_dataset)
     train_size = int(train_ratio * dataset_size)
     val_size = int(val_ratio * dataset_size)
