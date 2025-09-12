@@ -1,0 +1,20 @@
+experiments:
+  - method: "ours"
+    base_backbone: "resnet18" # Options: "resnet18", "resnet50", "densenet121", "mobilenet_v3_large", ...
+    dataset: "brain_cancer"   # Options: "pcam", "breakhis", "brain_cancer"
+    n_real_samples: 100       # 0 to use all dataset samples
+    num_runs: 1               # Run each experiment multiple times
+    last_layer: 2             # Layers of the backbone to delete from the bottom (1: fc, 2: avgpool + fc, ...)
+    amplify_factor: 10.0      # Factor to amplify the gradient of the most ambiguous samples
+    patience: 3              # Early stopping patience
+    num_epochs: 10           # Max number of epochs
+    lr: 0.001                # Learning rate
+    
+
+  - method: "ours"
+    base_backbone: "resnet50"
+    dataset: "breakhis"   
+    n_real_samples: 0      
+    num_runs: 5               
+    last_layer: 2             
+

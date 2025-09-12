@@ -1,0 +1,15 @@
+codecarbon==3.0.4
+datasets==4.0.0
+h5py==3.14.0
+matplotlib==3.10.6
+numpy==2.3.3
+pandas==2.3.2
+Pillow==11.3.0
+psutil==7.0.0
+PyYAML==6.0.2
+PyYAML==6.0.2
+scikit_learn==1.7.2
+seaborn==0.13.2
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+tqdm==4.67.1
