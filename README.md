@@ -180,23 +180,23 @@ By default, results (metrics, timings, CO₂ emissions) are stored in results.js
   <tbody>
     <tr>
       <td>ResNet18</td>
-      <td><b>79.78</b></td><td>5953.25</td><td>0.1202</td>
-      <td>79.03</td><td><b>841.32</b></td><td><b>0.0163</b></td>
+      <td>79.78</td><td>5953.25</td><td>0.1202</td>
+      <td>79.03</td><td>841.32</td><td>0.0163</td>
     </tr>
     <tr>
       <td>ResNet50</td>
-      <td><b>83.54</b></td><td>10191.44</td><td>0.2140</td>
-      <td>81.17</td><td><b>1114.45</b></td><td><b>0.0229</b></td>
+      <td>83.54</td><td>10191.44</td><td>0.2140</td>
+      <td>81.17</td><td>1114.45</td><td>0.0229</td>
     </tr>
     <tr>
       <td>MobileNetV3</td>
-      <td><b>82.96</b></td><td>8009.09</td><td>0.1665</td>
-      <td>82.64</td><td><b>695.83</b></td><td><b>0.0134</b></td>
+      <td>82.96</td><td>8009.09</td><td>0.1665</td>
+      <td>82.64</td><td>695.83</td><td>0.0134</td>
     </tr>
     <tr>
       <td>DenseNet121</td>
-      <td><b>84.22</b></td><td>20530.34</td><td>0.4382</td>
-      <td>80.67</td><td><b>1287.82</b></td><td><b>0.0264</b></td>
+      <td>84.22</td><td>20530.34</td><td>0.4382</td>
+      <td>80.67</td><td>1287.82</td><td>0.0264</td>
     </tr>
   </tbody>
 </table>
