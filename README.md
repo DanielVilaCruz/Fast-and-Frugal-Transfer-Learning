@@ -1,6 +1,8 @@
 # Fast-and-Frugal-Transfer-Learning
 This repository provides a **lightweight and energy-aware transfer learning strategy** designed for environments with limited hardware resources. Unlike traditional fine-tuning, the method **decouples feature extraction from classifier training**, avoiding unnecessary iterations through the backbone.
 
+> This work was published at the International Conference on Intelligent Data Engineering and Automated Learning (IDEAL 2025) and received the **Best Paper Award**🏆 ([Springer Link](https://link.springer.com/chapter/10.1007/978-3-032-10486-1_14)).
+
 ## Key Features 
 - **Precomputed Features:** Extract features once from the backbone to drastically reduce training time.  
 - **Thresholded Batch Normalization Adaptation:** Efficiently adapts batch normalization statistics to new domains.  
@@ -202,7 +204,19 @@ By default, results (metrics, timings, CO₂ emissions) are stored in results.js
 </table>
 
 
+## Citation
 
+If you use this work, please cite:
+```latex
+@inproceedings{vila2025fast,
+  title={Fast and Frugal Transfer Learning via Precomputed Features and Adaptive Normalization},
+  author={Vila-Cruz, Daniel and Bol{\'o}n-Canedo, Ver{\'o}nica and Mor{\'a}n-Fern{\'a}ndez, Laura},
+  booktitle={International Conference on Intelligent Data Engineering and Automated Learning},
+  pages={143--149},
+  year={2025},
+  organization={Springer}
+}
+```
 
   
   
